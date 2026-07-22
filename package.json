@@ -8,7 +8,11 @@
     "build": "pnpm -r run build",
     "lint": "pnpm -r run lint",
     "typecheck": "pnpm -r run typecheck",
-    "clean": "pnpm -r run clean"
+    "clean": "pnpm -r run clean",
+    "bun:dev": "bun --bun pnpm -r run dev",
+    "bun:build": "bun --bun pnpm -r run build",
+    "bun:lint": "bun --bun pnpm -r run lint",
+    "bun:typecheck": "bun --bun pnpm -r run typecheck"
   },
   "engines": {
     "node": ">=20.0.0",

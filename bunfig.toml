@@ -1,0 +1,4 @@
+[install]
+# Side-by-side with pnpm. Do not run `bun install` for the monorepo.
+# pnpm remains the source of truth. Use `pnpm install` for workspace ops.
+peer = false
