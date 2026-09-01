@@ -2,6 +2,8 @@
 
 Repository ledger — fleet-wide tracking of repos, branches, and PRs across the KooshaPari/Phenotype ecosystem.
 
+[![AI slop inside](https://sladge.net/badge.svg)](https://sladge.net) [![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/KooshaPari/RepoLedger/total)](https://github.com/KooshaPari/RepoLedger/releases)
+
 ## Overview
 
 This repository is part of the **Phenotype Fleet** — a multi-repo ecosystem covering Rust workspaces, TypeScript/Node apps, and Python tooling.
