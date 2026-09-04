@@ -15,17 +15,17 @@ Register the first evidence-backed research wave rooted in the Emergent Garden Y
 
 ## Authority contract
 
-| Concern | Canonical owner | Projection rule |
-|---|---|---|
-| Source records, versions, provenance, claims, ontology, synthesis | `ResearchLedger` | Link by campaign/snapshot/claim IDs; do not copy raw corpus |
-| Repository state, fanout destination, branch/PR and staleness | `RepoLedger` | Append-only fleet projection |
-| Experiment and baseline machinery | `Benchora` | Create only after an accepted work package |
-| Journey/challenge-world evidence | `phenotype-journeys` | Create only after an accepted work package |
-| Session replay | `SessionLedger` | Store run references/bundles, not corpus copies |
-| Trace/evidence graph | `Tracera` | Link claims, configurations, actions, evaluators, and promotions |
-| Work packages and evidence gates | `AgilePlus` | Campaign tasks and experiment state |
-| Project-specific interpretation | Destination project repository | Evidence-backed dossier only after relevance gate |
-| Portfolio narrative/catalog | generated surfaces | Generate after canonical decisions; no hand-edited authority |
+| Concern                                                           | Canonical owner                | Projection rule                                                  |
+| ----------------------------------------------------------------- | ------------------------------ | ---------------------------------------------------------------- |
+| Source records, versions, provenance, claims, ontology, synthesis | `ResearchLedger`               | Link by campaign/snapshot/claim IDs; do not copy raw corpus      |
+| Repository state, fanout destination, branch/PR and staleness     | `RepoLedger`                   | Append-only fleet projection                                     |
+| Experiment and baseline machinery                                 | `Benchora`                     | Create only after an accepted work package                       |
+| Journey/challenge-world evidence                                  | `phenotype-journeys`           | Create only after an accepted work package                       |
+| Session replay                                                    | `SessionLedger`                | Store run references/bundles, not corpus copies                  |
+| Trace/evidence graph                                              | `Tracera`                      | Link claims, configurations, actions, evaluators, and promotions |
+| Work packages and evidence gates                                  | `AgilePlus`                    | Campaign tasks and experiment state                              |
+| Project-specific interpretation                                   | Destination project repository | Evidence-backed dossier only after relevance gate                |
+| Portfolio narrative/catalog                                       | generated surfaces             | Generate after canonical decisions; no hand-edited authority     |
 
 ## ResearchLedger materialization observed
 
@@ -52,18 +52,18 @@ The canonical draft branch currently contains:
 
 ## Observed Wave 1 coverage
 
-| Surface | Observed coverage |
-|---|---:|
-| Current external channel count | 74 videos; not yet official uploads-playlist reconciled |
-| High-information video nodes identified | 14 |
-| Anchors analyzed | 13 at varying evidence depth |
-| Creator-owned public GitHub repositories enumerated | 30 |
-| Priority-A implementation repositories classified | 16 |
-| Controlled primary papers analyzed | 1 |
-| Claim records | 28 |
-| Normalized concepts | 40 |
-| Portfolio experiment contracts | 10 |
-| Individual product PRs | 0; deliberately withheld |
+| Surface                                             |                                       Observed coverage |
+| --------------------------------------------------- | ------------------------------------------------------: |
+| Current external channel count                      | 74 videos; not yet official uploads-playlist reconciled |
+| High-information video nodes identified             |                                                      14 |
+| Anchors analyzed                                    |                            13 at varying evidence depth |
+| Creator-owned public GitHub repositories enumerated |                                                      30 |
+| Priority-A implementation repositories classified   |                                                      16 |
+| Controlled primary papers analyzed                  |                                                       1 |
+| Claim records                                       |                                                      28 |
+| Normalized concepts                                 |                                                      40 |
+| Portfolio experiment contracts                      |                                                      10 |
+| Individual product PRs                              |                                0; deliberately withheld |
 
 ## Canonical Wave 1 conclusion
 
@@ -92,66 +92,66 @@ The same corpus supplies negative evidence:
 
 ### Cleared central authorities
 
-| Repository | Classification | Projection state |
-|---|---|---|
-| `ResearchLedger` | `DIRECTLY_ADOPT`, partially `ALREADY_IMPLEMENTED` | Canonical Wave 1 branch/PR open |
-| `RepoLedger` | `DIRECTLY_ADOPT` | This projection record |
-| `Benchora` | `DIRECTLY_ADOPT` | Experiment contracts exist centrally; no repo PR yet |
-| `phenotype-journeys` | `DIRECTLY_ADOPT` | Challenge-world/hard-oracle contracts exist centrally; no repo PR yet |
-| `SessionLedger` | `DIRECTLY_ADOPT` | Replay/run bundle role identified; no repo PR yet |
-| `Tracera` | `DIRECTLY_ADOPT` | Evidence-link vocabulary proposed centrally; no repo PR yet |
-| `AgilePlus` | `DIRECTLY_ADOPT` | Work-package/evidence-gate role identified; no repo PR yet |
+| Repository           | Classification                                    | Projection state                                                      |
+| -------------------- | ------------------------------------------------- | --------------------------------------------------------------------- |
+| `ResearchLedger`     | `DIRECTLY_ADOPT`, partially `ALREADY_IMPLEMENTED` | Canonical Wave 1 branch/PR open                                       |
+| `RepoLedger`         | `DIRECTLY_ADOPT`                                  | This projection record                                                |
+| `Benchora`           | `DIRECTLY_ADOPT`                                  | Experiment contracts exist centrally; no repo PR yet                  |
+| `phenotype-journeys` | `DIRECTLY_ADOPT`                                  | Challenge-world/hard-oracle contracts exist centrally; no repo PR yet |
+| `SessionLedger`      | `DIRECTLY_ADOPT`                                  | Replay/run bundle role identified; no repo PR yet                     |
+| `Tracera`            | `DIRECTLY_ADOPT`                                  | Evidence-link vocabulary proposed centrally; no repo PR yet           |
+| `AgilePlus`          | `DIRECTLY_ADOPT`                                  | Work-package/evidence-gate role identified; no repo PR yet            |
 
 ### Experiment candidates
 
-| Repository | Classification | Required gate |
-|---|---|---|
-| `Agentora` | `EXPERIMENT`, `CONTRADICTION` | Matched framework benchmark and fault/coordination corpus |
-| `thegent` | `EXPERIMENT`, `CONTRADICTION` | Boundary/WIP audit plus coordination-curve pilot |
-| `helios-cli` | `EXPERIMENT`, partially `ALREADY_IMPLEMENTED` | Harness-versus-direct-upstream recovery/evidence pilot |
-| `Civis` | `EXPERIMENT`, `PHILOSOPHICAL_CONVERGENCE` | Emergence-versus-scripted-null-model pilot |
-| `hwLedger`, `Eidolon`, `PlayCua` | `RESEARCH_LEAD` / `EXPERIMENT` | Observer/actuator/state-freshness decomposition |
+| Repository                       | Classification                                | Required gate                                             |
+| -------------------------------- | --------------------------------------------- | --------------------------------------------------------- |
+| `Agentora`                       | `EXPERIMENT`, `CONTRADICTION`                 | Matched framework benchmark and fault/coordination corpus |
+| `thegent`                        | `EXPERIMENT`, `CONTRADICTION`                 | Boundary/WIP audit plus coordination-curve pilot          |
+| `helios-cli`                     | `EXPERIMENT`, partially `ALREADY_IMPLEMENTED` | Harness-versus-direct-upstream recovery/evidence pilot    |
+| `Civis`                          | `EXPERIMENT`, `PHILOSOPHICAL_CONVERGENCE`     | Emergence-versus-scripted-null-model pilot                |
+| `hwLedger`, `Eidolon`, `PlayCua` | `RESEARCH_LEAD` / `EXPERIMENT`                | Observer/actuator/state-freshness decomposition           |
 
 ### Blocked fanout
 
-| Repository | Blocker |
-|---|---|
-| `HeliosLab` | Current configuration-management identity conflicts with accepted desktop coding-workbench intent |
-| `forgecode` | `helioslite` product/repository/successor claims are not reconciled with current inventory and role boundaries |
-| `PhenoSpecs` | Current instructions restrict new specs despite newer plans assigning cross-repository contract authority |
+| Repository   | Blocker                                                                                                        |
+| ------------ | -------------------------------------------------------------------------------------------------------------- |
+| `HeliosLab`  | Current configuration-management identity conflicts with accepted desktop coding-workbench intent              |
+| `forgecode`  | `helioslite` product/repository/successor claims are not reconciled with current inventory and role boundaries |
+| `PhenoSpecs` | Current instructions restrict new specs despite newer plans assigning cross-repository contract authority      |
 
 No blocked repository may receive corpus-derived architecture language merely to make the documentation appear coherent.
 
 ## Proposed experiment queue
 
-| Experiment | Candidate owners | Status |
-|---|---|---|
-| `EXP-EG-001` agent-count coordination curve | Benchora, Agentora/thegent, SessionLedger, Tracera | proposed |
-| `EXP-EG-002` communication ablation | Benchora, Agentora/thegent | proposed |
-| `EXP-EG-003` actuator-reliability ceiling | phenotype-journeys, Benchora, target product | proposed |
-| `EXP-EG-004` evaluator gaming and held-out generalization | Benchora, ResearchLedger | proposed |
-| `EXP-EG-005` vision versus structured observation | phenotype-journeys, Eidolon/PlayCua | proposed |
-| `EXP-EG-006` state machine versus LLM/hybrid controller | Benchora plus bounded environment | proposed |
-| `EXP-EG-007` open-ended-loop governance | Benchora, Agentora/thegent | proposed |
-| `EXP-EG-008` replay fidelity and divergence | SessionLedger, Tracera, phenotype-journeys | proposed |
-| `EXP-EG-009` Civis emergence null model | Civis, Benchora, ResearchLedger | proposed |
-| `EXP-EG-010` physical-loop stage decomposition | hwLedger/physical project, Benchora, Tracera | proposed |
+| Experiment                                                | Candidate owners                                   | Status   |
+| --------------------------------------------------------- | -------------------------------------------------- | -------- |
+| `EXP-EG-001` agent-count coordination curve               | Benchora, Agentora/thegent, SessionLedger, Tracera | proposed |
+| `EXP-EG-002` communication ablation                       | Benchora, Agentora/thegent                         | proposed |
+| `EXP-EG-003` actuator-reliability ceiling                 | phenotype-journeys, Benchora, target product       | proposed |
+| `EXP-EG-004` evaluator gaming and held-out generalization | Benchora, ResearchLedger                           | proposed |
+| `EXP-EG-005` vision versus structured observation         | phenotype-journeys, Eidolon/PlayCua                | proposed |
+| `EXP-EG-006` state machine versus LLM/hybrid controller   | Benchora plus bounded environment                  | proposed |
+| `EXP-EG-007` open-ended-loop governance                   | Benchora, Agentora/thegent                         | proposed |
+| `EXP-EG-008` replay fidelity and divergence               | SessionLedger, Tracera, phenotype-journeys         | proposed |
+| `EXP-EG-009` Civis emergence null model                   | Civis, Benchora, ResearchLedger                    | proposed |
+| `EXP-EG-010` physical-loop stage decomposition            | hwLedger/physical project, Benchora, Tracera       | proposed |
 
 These are research contracts, not claims that the destination repositories already implement them.
 
 ## Projection gate status
 
-| Gate | State |
-|---|---|
-| `G0_PREFLIGHT` | pass for Wave 1 |
-| `G1_INVENTORY` | incomplete — official uploads-playlist census absent |
-| `G2_TEXT_COVERAGE` | incomplete — full permitted text matrix absent |
-| `G3_DIRECT_GRAPH` | pass for selected anchors |
-| `G4_RECURSIVE_GRAPH` | partial |
-| `G5_SYNTHESIS` | pass for Wave 1 |
-| `G6_PORTFOLIO_MAPPING` | pass for central research use |
-| `G7_GITHUB_PROJECTION` | partial — ResearchLedger and RepoLedger drafts only |
-| `G8_INCREMENTAL_REFRESH` | not run |
+| Gate                     | State                                                |
+| ------------------------ | ---------------------------------------------------- |
+| `G0_PREFLIGHT`           | pass for Wave 1                                      |
+| `G1_INVENTORY`           | incomplete — official uploads-playlist census absent |
+| `G2_TEXT_COVERAGE`       | incomplete — full permitted text matrix absent       |
+| `G3_DIRECT_GRAPH`        | pass for selected anchors                            |
+| `G4_RECURSIVE_GRAPH`     | partial                                              |
+| `G5_SYNTHESIS`           | pass for Wave 1                                      |
+| `G6_PORTFOLIO_MAPPING`   | pass for central research use                        |
+| `G7_GITHUB_PROJECTION`   | partial — ResearchLedger and RepoLedger drafts only  |
+| `G8_INCREMENTAL_REFRESH` | not run                                              |
 
 ## Withheld downstream mutations
 

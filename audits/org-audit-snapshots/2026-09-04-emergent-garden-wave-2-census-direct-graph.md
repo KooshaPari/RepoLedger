@@ -31,37 +31,37 @@ Both repository Actions secrets and the repository's isolated Infisical `dev` en
 
 ## Current bounded counts
 
-| Surface | Observed state |
-|---|---:|
-| Official Atom recent-window video records | 15 |
-| Non-empty recent descriptions | 15 |
-| Transcript records acquired | 0 |
-| Normalized description edges | 186 |
-| Unique outbound targets | 116 |
-| Domains represented | 49 |
-| Unique high-value targets | 23 |
-| GitHub implementation candidates expanded | 11 |
-| Primary arXiv papers expanded | 3 |
-| Creator-controlled pages expanded | 9 |
-| High-value expansion failures | 0 |
-| Canonical ResearchLedger draft PRs | 1 |
-| RepoLedger projection draft PRs | 1 |
-| Individual experiment-spec drafts | 1 |
-| Product-code changes | 0 |
+| Surface                                   | Observed state |
+| ----------------------------------------- | -------------: |
+| Official Atom recent-window video records |             15 |
+| Non-empty recent descriptions             |             15 |
+| Transcript records acquired               |              0 |
+| Normalized description edges              |            186 |
+| Unique outbound targets                   |            116 |
+| Domains represented                       |             49 |
+| Unique high-value targets                 |             23 |
+| GitHub implementation candidates expanded |             11 |
+| Primary arXiv papers expanded             |              3 |
+| Creator-controlled pages expanded         |              9 |
+| High-value expansion failures             |              0 |
+| Canonical ResearchLedger draft PRs        |              1 |
+| RepoLedger projection draft PRs           |              1 |
+| Individual experiment-spec drafts         |              1 |
+| Product-code changes                      |              0 |
 
 These counts apply only to the current official Atom-feed window. They are not the channel total and do not bound older descriptions.
 
 ## Gate projection
 
-| Gate | Projected state | Fleet implication |
-|---|---|---|
-| `G1_INVENTORY` | **BLOCKED** | Do not report a complete channel corpus. Issue #82 owns the restricted-key action. |
-| `G2_TEXT_COVERAGE` | **PARTIAL** | Recent description metadata is usable; transcripts remain unavailable and unacquired. |
-| `G3_DIRECT_GRAPH` | **PARTIAL / RECENT WINDOW EXPANDED** | The 23 high-value targets in the sample are revision- or response-pinned. Older edges remain unknown. |
-| `G4_PROJECT_RELEVANCE` | **PARTIAL** | Existing evidence-backed mappings remain; direct links strengthen provenance but do not clear thematic fanout. |
-| `G5_EXPERIMENT` | **SPECIFIED, NOT RUN** | Benchora #106 is the only currently cleared experiment contract. |
-| `G6_PROJECT_PR` | **ONE DOCUMENTATION PILOT OPEN** | No implementation PR is cleared. |
-| `G7_RELEASE` | **NOT APPLICABLE** | No reproduced result or product implementation exists. |
+| Gate                   | Projected state                      | Fleet implication                                                                                              |
+| ---------------------- | ------------------------------------ | -------------------------------------------------------------------------------------------------------------- |
+| `G1_INVENTORY`         | **BLOCKED**                          | Do not report a complete channel corpus. Issue #82 owns the restricted-key action.                             |
+| `G2_TEXT_COVERAGE`     | **PARTIAL**                          | Recent description metadata is usable; transcripts remain unavailable and unacquired.                          |
+| `G3_DIRECT_GRAPH`      | **PARTIAL / RECENT WINDOW EXPANDED** | The 23 high-value targets in the sample are revision- or response-pinned. Older edges remain unknown.          |
+| `G4_PROJECT_RELEVANCE` | **PARTIAL**                          | Existing evidence-backed mappings remain; direct links strengthen provenance but do not clear thematic fanout. |
+| `G5_EXPERIMENT`        | **SPECIFIED, NOT RUN**               | Benchora #106 is the only currently cleared experiment contract.                                               |
+| `G6_PROJECT_PR`        | **ONE DOCUMENTATION PILOT OPEN**     | No implementation PR is cleared.                                                                               |
+| `G7_RELEASE`           | **NOT APPLICABLE**                   | No reproduced result or product implementation exists.                                                         |
 
 ## Directly expanded implementation frontier
 

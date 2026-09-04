@@ -20,20 +20,20 @@ The research index and checkpoint were updated to make the enlarged coverage and
 
 ## Updated coverage
 
-| Surface | Current observed state |
-|---|---:|
-| High-value video or release nodes identified | 16 |
-| Anchor videos analyzed | 13 |
-| Public creator-owned GitHub repositories enumerated | 30 |
-| Creator-gallery projects classified | 13 |
-| Primary research papers analyzed | 1 |
-| Falsifiable claims | 28 |
-| Normalized concepts | 40 |
-| Portfolio experiment contracts | 10 |
-| Canonical research draft PRs | 1 |
-| Fleet projection draft PRs | 1 |
-| Product-code changes | 0 |
-| Individual product PRs | 0 |
+| Surface                                             | Current observed state |
+| --------------------------------------------------- | ---------------------: |
+| High-value video or release nodes identified        |                     16 |
+| Anchor videos analyzed                              |                     13 |
+| Public creator-owned GitHub repositories enumerated |                     30 |
+| Creator-gallery projects classified                 |                     13 |
+| Primary research papers analyzed                    |                      1 |
+| Falsifiable claims                                  |                     28 |
+| Normalized concepts                                 |                     40 |
+| Portfolio experiment contracts                      |                     10 |
+| Canonical research draft PRs                        |                      1 |
+| Fleet projection draft PRs                          |                      1 |
+| Product-code changes                                |                      0 |
+| Individual product PRs                              |                      0 |
 
 These counts describe the current bounded Wave 1 artifacts. They are not the complete channel census.
 
@@ -77,21 +77,21 @@ enable bounded exploration
 
 ## Gallery identity map
 
-| Creator-gallery project | Wave 1 identity state | Candidate authority or target |
-|---|---|---|
-| Life Engine | confirmed | `MaxRobinsonTheGreat/LifeEngine`; predecessor `EvolutionSimulator` |
-| Lenia | unresolved | no creator-controlled target accepted yet |
-| Neural Patterns | confirmed | `MaxRobinsonTheGreat/NeuralPatterns`; `neuralpatterns.io` |
-| Evoloop | unresolved | no creator-controlled target accepted yet |
-| Functions in Hyperspace | confirmed | `MaxRobinsonTheGreat/hyperdimensions` |
-| Mindcraft | confirmed with lineage work | `MaxRobinsonTheGreat/mindcraft` → `mindcraft-bots/mindcraft` candidate lineage |
-| Langton's Ant Colony | probable | `MaxRobinsonTheGreat/turmites` |
-| Neural Hill Climber | probable | `MaxRobinsonTheGreat/hillclimbers`; implementation not yet established |
-| Biomorphs 3D | confirmed as repository surface | `hyperdimensions/biomorphs.html` |
-| Picbreeder | confirmed as repository surface | `hyperdimensions/picbreeder.html` |
-| Game of Life | probable creator webtoy | `evolvecode.io/alife/gol.html` |
-| Germs Genetic Algorithm | probable creator webtoy | `evolvecode.io/alife/aquarium.html` |
-| Elementary CA | unresolved | no creator-controlled target accepted yet |
+| Creator-gallery project | Wave 1 identity state           | Candidate authority or target                                                  |
+| ----------------------- | ------------------------------- | ------------------------------------------------------------------------------ |
+| Life Engine             | confirmed                       | `MaxRobinsonTheGreat/LifeEngine`; predecessor `EvolutionSimulator`             |
+| Lenia                   | unresolved                      | no creator-controlled target accepted yet                                      |
+| Neural Patterns         | confirmed                       | `MaxRobinsonTheGreat/NeuralPatterns`; `neuralpatterns.io`                      |
+| Evoloop                 | unresolved                      | no creator-controlled target accepted yet                                      |
+| Functions in Hyperspace | confirmed                       | `MaxRobinsonTheGreat/hyperdimensions`                                          |
+| Mindcraft               | confirmed with lineage work     | `MaxRobinsonTheGreat/mindcraft` → `mindcraft-bots/mindcraft` candidate lineage |
+| Langton's Ant Colony    | probable                        | `MaxRobinsonTheGreat/turmites`                                                 |
+| Neural Hill Climber     | probable                        | `MaxRobinsonTheGreat/hillclimbers`; implementation not yet established         |
+| Biomorphs 3D            | confirmed as repository surface | `hyperdimensions/biomorphs.html`                                               |
+| Picbreeder              | confirmed as repository surface | `hyperdimensions/picbreeder.html`                                              |
+| Game of Life            | probable creator webtoy         | `evolvecode.io/alife/gol.html`                                                 |
+| Germs Genetic Algorithm | probable creator webtoy         | `evolvecode.io/alife/aquarium.html`                                            |
+| Elementary CA           | unresolved                      | no creator-controlled target accepted yet                                      |
 
 `probable` and `unresolved` are intentionally not upgraded to accepted implementation relationships.
 
