@@ -18,12 +18,12 @@ This snapshot supplements the existing Wave 1 and Wave 2 fleet projections with 
 
 **Observed canonical head:** `9b76082a5a12069c37746d60e08c71cd990a8458`
 
-| Workflow | Run | State | Interpretation |
-|---|---:|---|---|
-| CI | 335 | success | Python, TypeScript, Rust, dependency, security, and license validation completed successfully. |
-| Trunk Check | 333 | success | Changed Markdown, JSON, YAML, and related formatting passed. |
-| Infisical Sync | 203 | success | Repository secret-synchronization validation completed successfully. |
-| Review Fanout | 44 | failure at runner setup | `Dispatch to smart queue` failed during `Set up job` before any repository step. This is infrastructure state, not corpus validation evidence. |
+| Workflow       | Run | State                   | Interpretation                                                                                                                                 |
+| -------------- | --: | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| CI             | 335 | success                 | Python, TypeScript, Rust, dependency, security, and license validation completed successfully.                                                 |
+| Trunk Check    | 333 | success                 | Changed Markdown, JSON, YAML, and related formatting passed.                                                                                   |
+| Infisical Sync | 203 | success                 | Repository secret-synchronization validation completed successfully.                                                                           |
+| Review Fanout  |  44 | failure at runner setup | `Dispatch to smart queue` failed during `Set up job` before any repository step. This is infrastructure state, not corpus validation evidence. |
 
 The substantive canonical validation is green. The Review Fanout result must not be reinterpreted as evidence that the research content is valid or invalid.
 
@@ -31,12 +31,12 @@ The substantive canonical validation is green. The Review Fanout result must not
 
 **Observed projection head before this append-only snapshot:** `4e794262f8eb18d00993c16920e71cd5583e7adf`
 
-| Workflow | Run | State | Interpretation |
-|---|---:|---|---|
-| CI | 123 | success | Aggregate RepoLedger CI passed for the projection branch. |
-| Trunk Check | 124 | success | The formatted append-only projection artifacts passed. |
-| Infisical Sync | 44 | queued | No conclusion was available at the recording point. |
-| Review Fanout | 8 | failure at runner setup | The smart-queue dispatch failed during setup before project steps. |
+| Workflow       | Run | State                   | Interpretation                                                     |
+| -------------- | --: | ----------------------- | ------------------------------------------------------------------ |
+| CI             | 123 | success                 | Aggregate RepoLedger CI passed for the projection branch.          |
+| Trunk Check    | 124 | success                 | The formatted append-only projection artifacts passed.             |
+| Infisical Sync |  44 | queued                  | No conclusion was available at the recording point.                |
+| Review Fanout  |   8 | failure at runner setup | The smart-queue dispatch failed during setup before project steps. |
 
 The projection content passed its normal CI and formatting gates. The generic CI implementation still contained defects hidden by advisory jobs, which were isolated instead of patched into the research branch.
 
@@ -55,21 +55,21 @@ The repair remains separate from PR #38. It changes CI infrastructure only and c
 
 ### Verified repair result
 
-| Check | Result |
-|---|---|
-| Trunk Check | success |
-| pinned pnpm installation | success |
-| pnpm cache setup | success |
-| `pnpm install --frozen-lockfile` | success |
-| repository lint script | success |
-| repository typecheck script | success |
-| workspace tests when present | success |
-| Gitleaks with full Git history | success |
-| dependency review | success |
-| aggregate `ci / lint` | success |
-| aggregate `ci / test` | success |
-| Review Fanout | runner-setup failure before project steps |
-| Infisical Sync | queued at the recording point |
+| Check                            | Result                                    |
+| -------------------------------- | ----------------------------------------- |
+| Trunk Check                      | success                                   |
+| pinned pnpm installation         | success                                   |
+| pnpm cache setup                 | success                                   |
+| `pnpm install --frozen-lockfile` | success                                   |
+| repository lint script           | success                                   |
+| repository typecheck script      | success                                   |
+| workspace tests when present     | success                                   |
+| Gitleaks with full Git history   | success                                   |
+| dependency review                | success                                   |
+| aggregate `ci / lint`            | success                                   |
+| aggregate `ci / test`            | success                                   |
+| Review Fanout                    | runner-setup failure before project steps |
+| Infisical Sync                   | queued at the recording point             |
 
 The repaired Gitleaks run passed. The earlier partial run produced no secret finding; it was an invalid scan caused by missing Git history, not proof of either a leak or a clean repository.
 
@@ -88,15 +88,15 @@ The pilot remains documentation-only and has no result claim.
 
 ## Research gate state remains unchanged
 
-| Gate | State |
-|---|---|
-| `G1_INVENTORY` | **BLOCKED** — ResearchLedger issue #82 owns the restricted YouTube Data API credential action. |
-| `G2_TEXT_COVERAGE` | **PARTIAL** — recent description metadata exists; transcripts are unacquired. |
-| `G3_DIRECT_GRAPH` | **PARTIAL / RECENT WINDOW EXPANDED** — 23 of 23 discovered high-value targets expanded successfully. |
-| `G4_PROJECT_RELEVANCE` | **PARTIAL** — existing evidence-backed mappings remain; broad fanout is not cleared. |
-| `G5_EXPERIMENT` | **SPECIFIED, NOT RUN** — Benchora #106. |
-| `G6_PROJECT_PR` | **ONE DOCUMENTATION PILOT OPEN** — no implementation clearance. |
-| `G7_RELEASE` | **NOT APPLICABLE**. |
+| Gate                   | State                                                                                                |
+| ---------------------- | ---------------------------------------------------------------------------------------------------- |
+| `G1_INVENTORY`         | **BLOCKED** — ResearchLedger issue #82 owns the restricted YouTube Data API credential action.       |
+| `G2_TEXT_COVERAGE`     | **PARTIAL** — recent description metadata exists; transcripts are unacquired.                        |
+| `G3_DIRECT_GRAPH`      | **PARTIAL / RECENT WINDOW EXPANDED** — 23 of 23 discovered high-value targets expanded successfully. |
+| `G4_PROJECT_RELEVANCE` | **PARTIAL** — existing evidence-backed mappings remain; broad fanout is not cleared.                 |
+| `G5_EXPERIMENT`        | **SPECIFIED, NOT RUN** — Benchora #106.                                                              |
+| `G6_PROJECT_PR`        | **ONE DOCUMENTATION PILOT OPEN** — no implementation clearance.                                      |
+| `G7_RELEASE`           | **NOT APPLICABLE**.                                                                                  |
 
 The bounded Wave 2 counts remain:
 
