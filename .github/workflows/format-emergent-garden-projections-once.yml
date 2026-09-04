@@ -1,0 +1,45 @@
+name: Format Emergent Garden Projections Once
+
+on:
+  push:
+    branches:
+      - docs/emergent-garden-wave1-projection-20260904
+    paths:
+      - .github/workflows/format-emergent-garden-projections-once.yml
+
+permissions:
+  contents: write
+
+jobs:
+  format:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout projection branch
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: docs/emergent-garden-wave1-projection-20260904
+          fetch-depth: 0
+
+      - name: Format Emergent Garden projections
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm install --global prettier@3.6.2
+          prettier --write 'audits/org-audit-snapshots/2026-09-04-emergent-garden-*.md'
+          git rm .github/workflows/format-emergent-garden-projections-once.yml
+
+      - name: Commit formatted projections and self-delete
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add -A
+          if git diff --cached --quiet; then
+            echo 'No formatting changes to commit.'
+            exit 0
+          fi
+          git commit -m 'style: format Emergent Garden projections'
+          git push origin HEAD:docs/emergent-garden-wave1-projection-20260904
