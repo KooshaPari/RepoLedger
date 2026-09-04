@@ -155,21 +155,27 @@ jobs:
     continue-on-error: true
     steps:
       - uses: actions/checkout@v4
+      - name: Install pinned pnpm
+        uses: pnpm/action-setup@b906affcce14559ad1aafd4ab0e942779e9f58b1
+        with:
+          version: '10.33.0'
+          run_install: false
       - uses: actions/setup-node@v7
         with:
           node-version: '20'
-          cache: 'npm'
-      - run: npm ci --no-audit --no-fund || npm install --no-audit --no-fund
+          cache: 'pnpm'
+          cache-dependency-path: pnpm-lock.yaml
+      - name: Install workspace dependencies
+        run: pnpm install --frozen-lockfile
       - name: lint
         run: |
-          if [ -f package.json ] && grep -q '"lint"' package.json; then
-            npm run lint 2>&1 || echo "::warning::lint issues (advisory)"
-          fi
+          pnpm run lint 2>&1 || echo "::warning::lint issues (advisory)"
+      - name: typecheck
+        run: |
+          pnpm run typecheck 2>&1 || echo "::warning::typecheck issues (advisory)"
       - name: test
         run: |
-          if [ -f package.json ] && grep -q '"test"' package.json; then
-            npm test 2>&1 || echo "::warning::test failures (advisory)"
-          fi
+          pnpm -r --if-present test 2>&1 || echo "::warning::test failures (advisory)"
 
   security:
     name: Security Scan
@@ -179,6 +185,11 @@ jobs:
     continue-on-error: true
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Gitleaks constructs a PR commit range; shallow history makes the
+          # generated base revision ambiguous and converts a zero-byte scan
+          # into an infrastructure failure.
+          fetch-depth: 0
       - name: gitleaks
         uses: gitleaks/gitleaks-action@v3
         env:
@@ -211,7 +222,7 @@ jobs:
             "go:${{ needs.go.result }}" \
             "typescript:${{ needs.typescript.result }}" \
             "security:${{ needs.security.result }}" \
-            "dep-review:${{ needs.dependency-review.result }}" \
+            "dep-review:${{ needs.dep-review.result }}" \
             ; do
             name="${pair%%:*}"
             result="${pair#*:}"
