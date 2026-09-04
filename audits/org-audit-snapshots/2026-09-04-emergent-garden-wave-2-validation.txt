@@ -1,0 +1,10 @@
+Campaign: eg-nested-corpus-2026-09
+Projection: wave-2-census-and-direct-graph
+Formatted parent: c8d4009ffb22bfb0376e31f1cee5260fe99615e2
+Canonical ResearchLedger PR: #81
+Canonical blocker: ResearchLedger issue #82
+Recent-window records: 15
+Description edges: 186
+Unique high-value expansions: 23
+Expansion failures: 0
+Purpose: trigger normal repository validation on the formatted projection head.
