@@ -1,4 +1,4 @@
-name: Format CI Repair Once
+name: Inspect CI Repair Formatting Once
 
 on:
   push:
@@ -8,10 +8,10 @@ on:
       - .github/workflows/format-ci-repair-once.yml
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  format:
+  inspect:
     if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-24.04
     timeout-minutes: 10
@@ -22,20 +22,12 @@ jobs:
           ref: fix/ci-pnpm-gitleaks-history-20260904
           fetch-depth: 0
 
-      - name: Format workflow and remove formatter
+      - name: Print exact Prettier diff
         shell: bash
         run: |
           set -euo pipefail
           npm install --global prettier@3.6.2
           prettier --write .github/workflows/ci.yml
-          git rm .github/workflows/format-ci-repair-once.yml
-
-      - name: Commit formatted workflow
-        shell: bash
-        run: |
-          set -euo pipefail
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add -A
-          git commit -m 'style(ci): format RepoLedger workflow'
-          git push origin HEAD:fix/ci-pnpm-gitleaks-history-20260904
+          echo '--- PRETTIER DIFF BEGIN ---'
+          git --no-pager diff -- .github/workflows/ci.yml
+          echo '--- PRETTIER DIFF END ---'
